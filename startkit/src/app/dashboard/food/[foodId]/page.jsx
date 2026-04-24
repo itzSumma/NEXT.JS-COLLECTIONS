@@ -20,7 +20,7 @@ const FoodDetailPage = async ({ params }) => {
     <div className="mx-auto container  mt-10  rounded-2xl">
       <div>
         <h2 className="text-2xl font-bold text-center mb-4 text-emerald-700">
-          Showing details of you Food:{foodId}
+          Showing details of your:{foodId}
         </h2>
         <div className="border p-5 rounded-2xl border-zinc-600 shadow-md  text-center ">
           <h2 className="text-xl font-bold text-slate-600 text-center">{dish_name}</h2>
