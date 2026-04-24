@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "title": "Learn Next.js SSR",
+    "description": "Understand server-side rendering in Next.js",
+    "status": "pending",
+    "priority": "high",
+    "assignedTo": "Frontend Team",
+    "dueDate": "2026-04-25"
+  },
+  {
+    "id": 2,
+    "title": "Build Books Page",
+    "description": "Create books page with data fetching",
+    "status": "in-progress",
+    "priority": "medium",
+    "assignedTo": "UI Developer",
+    "dueDate": "2026-04-26"
+  },
+  {
+    "id": 3,
+    "title": "Practice ISR",
+    "description": "Implement ISR with revalidation",
+    "status": "pending",
+    "priority": "high",
+    "assignedTo": "Next.js Team",
+    "dueDate": "2026-04-28"
+  },
+  {
+    "id": 4,
+    "title": "Add Loading UI",
+    "description": "Use suspense and loading.tsx",
+    "status": "completed",
+    "priority": "low",
+    "assignedTo": "UX Engineer",
+    "dueDate": "2026-04-20"
+  },
+  {
+    "id": 5,
+    "title": "Deploy Project",
+    "description": "Deploy Next.js app to Vercel",
+    "status": "pending",
+    "priority": "high",
+    "assignedTo": "DevOps",
+    "dueDate": "2026-05-01"
+  }
+]

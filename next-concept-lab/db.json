@@ -1,0 +1,101 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Wireless Headphones",
+      "price": 60.54,
+      "category": "Electronics",
+      "stock": 30,
+      "rating": 4.5,
+      "description": "Noise cancelling over-ear wireless headphones with deep bass."
+    },
+    {
+      "id": 2,
+      "name": "Smart Watch",
+      "price": 110,
+      "category": "Wearables",
+      "stock": 20,
+      "rating": 4.3,
+      "description": "Fitness tracking smart watch with heart rate monitor."
+    },
+    {
+      "id": 3,
+      "name": "Gaming Mouse",
+      "price": 25.5,
+      "category": "Accessories",
+      "stock": 50,
+      "rating": 4.6,
+      "description": "RGB gaming mouse with adjustable DPI settings."
+    },
+    {
+      "id": 4,
+      "name": "Mechanical Keyboard",
+      "price": 75.0,
+      "category": "Accessories",
+      "stock": 15,
+      "rating": 4.7,
+      "description": "Mechanical keyboard with blue switches and backlight."
+    },
+    {
+      "id": 5,
+      "name": "Bluetooth Speaker",
+      "price": 45.99,
+      "category": "Electronics",
+      "stock": 25,
+      "rating": 4.4,
+      "description": "Portable Bluetooth speaker with strong sound and bass."
+    }
+  ],
+   "books": [
+    {
+"id": "1",
+"title": "Atomic Habits",
+"author": "James Clear",
+"price": 450,
+"category": "Self Development",
+"rating": 4.8,
+"description": "A practical guide to building good habits and breaking bad ones using small daily improvements.",
+"image": "http://localhost:5000/images/atomic-habits.jpg"
+},
+{
+"id": "2",
+"title": "The Alchemist",
+"author": "Paulo Coelho",
+"price": 350,
+"category": "Fiction",
+"rating": 4.6,
+"description": "A philosophical novel about a shepherd boy who travels to find treasure and discovers his destiny.",
+"image": "http://localhost:5000/images/the-alchemist.jpg"
+},
+{
+"id": "3",
+"title": "Rich Dad Poor Dad",
+"author": "Robert Kiyosaki",
+"price": 400,
+"category": "Finance",
+"rating": 4.5,
+"description": "Explains financial literacy, investing, and the mindset needed to build wealth.",
+"image": "http://localhost:5000/images/rich-dad-poor-dad.jpg"
+},
+{
+"id": "4",
+"title": "Deep Work",
+"author": "Cal Newport",
+"price": 420,
+"category": "Productivity",
+"rating": 4.7,
+"description": "Teaches how to focus without distraction and produce high-quality work in less time.",
+"image": "http://localhost:5000/images/deep-work.jpg"
+},
+{
+"id": "5",
+"title": "Clean Code",
+"author": "Robert C. Martin",
+"price": 550,
+"category": "Programming",
+"rating": 4.9,
+"description": "A handbook of best practices for writing clean, readable, and maintainable code.",
+"image": "http://localhost:5000/images/clean-code.jpg"
+}
+  ]
+}
