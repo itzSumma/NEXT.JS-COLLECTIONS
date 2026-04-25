@@ -23,7 +23,7 @@ const RightSideBar = () => {
                 </button>
 
                 {/* Middle div */}
-                <div className='space-y-2 '>
+                <div className='space-y-2 text-lg font-medium '>
                     <h2 className='font-semibold text-xl m-2'>Find Us On</h2>
 
                     <div className='flex justify-center gap-2 border border-zinc-400 p-2 rounded-md items-center hover:bg-slate-300'>
@@ -43,9 +43,9 @@ const RightSideBar = () => {
 
                     {/* last div */}
                     <div className='bg-gray-300 mt-4 p-2 rounded-md space-y-2 items-center'>
-                        <Image src={swimming} alt='swimming' width={300} height={300}/>
-                        <Image src={classroom} alt='classroom' width={300} height={300}/>
-                        <Image src={playground} alt='playground' width={300} height={300}/>
+                        <Image src={swimming} alt='swimming' width={300} height={300} className="mx-auto block"/>
+                        <Image src={classroom} alt='classroom' width={300} height={300}  className="mx-auto block"/>
+                        <Image src={playground} alt='playground' width={300} height={300}  className="mx-auto block"/>
                     </div>
 
                 </div>
