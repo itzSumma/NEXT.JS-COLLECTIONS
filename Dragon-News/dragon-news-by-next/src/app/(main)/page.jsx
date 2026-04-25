@@ -6,6 +6,7 @@
 //   return data.data;
 
 import LeftsideBar from "@/Components/Homepage/NewsBars/LeftsideBar";
+import RightSideBar from "@/Components/Homepage/NewsBars/RightSideBar";
 
 // }
 const getCategories = async ()=>{
@@ -31,8 +32,8 @@ export default async function Home() {
   </div>
 
   {/* Right sidebar */}
-  <div className="md:col-span-3 col-span-1 text-2xl font-bold bg-teal-200">
-    Social icons
+  <div className="md:col-span-3 col-span-1 ">
+ <RightSideBar ></RightSideBar>
   </div>
 </div>
   );
