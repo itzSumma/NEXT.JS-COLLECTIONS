@@ -1,4 +1,3 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactCompiler: true,
   images: {
@@ -6,10 +5,12 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "images.unsplash.com",
+        pathname: "/**",
       },
       {
         protocol: "https",
         hostname: "i.ibb.co",
+        pathname: "/**",
       },
     ],
   },
