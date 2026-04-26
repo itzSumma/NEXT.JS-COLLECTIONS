@@ -23,21 +23,21 @@ const FoodDetailPage = async ({ params }) => {
           Showing details of your:{foodId}
         </h2>
         <div className="border p-5 rounded-2xl border-zinc-600 shadow-md  text-center ">
-          <h2 className="text-xl font-bold text-slate-600 text-center">{dish_name}</h2>
+          <h2 className="text-xl font-bold dark:text-white text-slate-600 text-center">{dish_name}</h2>
 
-          <p className=" text-gray-900 text-md font-medium"><span className="text-xl font-semibold">Cuisine: </span>{cuisine}</p>
+          <p className=" text-gray-900 dark:text-zinc-300 text-md font-medium"><span className="text-xl font-semibold">Cuisine: </span>{cuisine}</p>
           <div className="flex justify-center">
             <img src={image_link} alt={dish_name} width={200} height={200} />
           </div>
 
 <div className="text-center space-y-2">
-    <p className="text-md font-medium text-gray-600"><span className="text-lg font-bold">Alternative Names:</span>{alternative_names}</p>
+    <p className="text-md font-medium dark:text-zinc-300 text-gray-600"><span className="text-lg font-bold">Alternative Names:</span>{alternative_names}</p>
 <p className="text-md font-medium text-emerald-700"><span className="text-lg font-bold text-emerald-800">Main Ingredients:  </span> {main_ingredients}</p>
 <h3 className="text-xl font-semibold ">Nutrition:</h3>
      
 </div>
  <div className="flex justify-center">
-  <ul className="list-disc text-md font-medium text-gray-800">
+  <ul className="list-disc text-md dark:text-zinc-300 font-medium text-gray-800">
     <li>Calories: {nutrition.calories}</li>
     <li>Protein: {nutrition.protein}</li>
     <li>Carbs: {nutrition.carbohydrates}</li>

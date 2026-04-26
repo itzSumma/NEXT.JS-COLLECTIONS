@@ -128,11 +128,12 @@ const BookCard = () => {
         {books.map((book) => (
           <Card
   key={book.bookId}
-  className="w-full bg-white
-    hover:bg-gradient-to-br hover:from-emerald-200 hover:via-teal-50 hover:to-green-100
-    transition-all duration-300
-    hover:-translate-y-2 hover:shadow-[0_15px_40px_rgba(13,151,105,0.2)]
-    border border-gray-200 hover:border-emerald-300"
+  className="w-full bg-white dark:bg-zinc-800
+hover:bg-gradient-to-br hover:from-emerald-200 hover:via-teal-50 hover:to-green-100
+dark:hover:from-emerald-900 dark:hover:via-teal-900 dark:hover:to-zinc-900
+transition-all duration-300
+hover:-translate-y-2 hover:shadow-[0_15px_40px_rgba(13,151,105,0.2)]
+border border-gray-200 dark:border-zinc-700 hover:border-emerald-300 dark:hover:border-emerald-500"
 >
   {/* IMAGE — aspect ratio fix */}
   <div className="relative w-full aspect-[4/3] overflow-hidden rounded-t-xl">

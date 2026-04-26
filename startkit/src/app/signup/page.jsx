@@ -59,35 +59,37 @@ const SignUpPage = () => {
   };
 
   return (
-    <div className="min-h-[100dvh] w-full flex items-center justify-center px-4 py-8 bg-white overflow-x-hidden">
+    <div className="min-h-[100dvh] w-full flex items-center justify-center px-4 py-8 bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 overflow-x-hidden">
 
       <div className="w-full max-w-md">
 
-        <h2 className="text-center text-4xl font-bold text-emerald-700 mb-6">
+        <h2 className="text-center text-4xl font-bold text-emerald-700 dark:text-emerald-400 mb-6">
           Sign Up
         </h2>
 
-        <div className="bg-gradient-to-br from-emerald-100 via-teal-50 to-green-100 border border-zinc-200 p-6 rounded-xl shadow-lg">
+        <div className="bg-gradient-to-br from-emerald-100 via-teal-50 to-green-100 
+        dark:from-zinc-900 dark:via-zinc-900 dark:to-zinc-800
+        border border-zinc-200 dark:border-zinc-700 p-6 rounded-xl shadow-lg">
 
           <Form onSubmit={onSubmit}>
 
             <TextField isRequired name="name" type="text">
-              <Label>Name</Label>
+              <Label className="dark:text-zinc-200">Name</Label>
               <Input placeholder="Enter your Name" />
               <FieldError />
             </TextField>
 
             <TextField isRequired name="email" type="email">
-              <Label>Email</Label>
+              <Label className="dark:text-zinc-200">Email</Label>
               <Input placeholder="Enter your Email" />
               <FieldError />
             </TextField>
 
             <TextField isRequired name="password" type="password">
-              <Label>Password</Label>
+              <Label className="dark:text-zinc-200">Password</Label>
               <Input placeholder="Enter your Password" />
-              <Description>
-                8+ chars, 1 uppercase letter & 1 number
+              <Description className="dark:text-zinc-400">
+                8+ chars, 1 uppercase letter & 2 number
               </Description>
               <FieldError />
             </TextField>
@@ -96,7 +98,7 @@ const SignUpPage = () => {
               <Button
                 type="submit"
                 isDisabled={loading}
-                className="bg-emerald-700 text-white hover:bg-emerald-800"
+                className="bg-emerald-700 text-white hover:bg-emerald-800 dark:bg-emerald-600 dark:hover:bg-emerald-700"
               >
                 <Check />
                 {loading ? "Creating..." : "Submit"}

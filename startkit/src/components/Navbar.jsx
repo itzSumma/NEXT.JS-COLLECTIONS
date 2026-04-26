@@ -3,115 +3,110 @@
 import { useState } from "react";
 import { Link, Button } from "@heroui/react";
 import { authClient } from "@/lib/auth-client";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const { data: session, isPending } = authClient.useSession();
-  console.log(session);
   const user = session?.user;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  if (isPending) return <div>Loading...</div>;
+  if (isPending) return <div className="p-4">Loading...</div>;
 
   const handleSignOut = () => {
     authClient.signOut();
   };
+
+  // 🔥 Reusable link style
+  const linkStyle = `
+    no-underline text-base md:text-lg px-4 py-2 rounded-md font-medium
+    border border-transparent
+    bg-emerald-600 text-white
+    hover:bg-emerald-700
+    dark:bg-zinc-800 dark:text-emerald-300
+    dark:border-zinc-700
+    dark:hover:bg-zinc-700
+    transition-colors duration-200
+  `;
+
   const links = (
     <>
-      <li className="">
-        <Link
-          className="no-underline text-xl border border-zinc-300 p-2 rounded-md bg-emerald-700 hover:bg-emerald-900 text-white"
-          href="/">
-          Home
-        </Link>
+      <li>
+        <Link href="/" className={linkStyle}>Home</Link>
       </li>
 
       <li>
-        <Link
-          className="no-underline text-xl border border-zinc-300 p-2 rounded-md bg-emerald-700 text-white hover:bg-emerald-900"
-          href="/dashboard">
-          Dashboard
-        </Link>
+        <Link href="/dashboard" className={linkStyle}>Dashboard</Link>
       </li>
+
       <li>
-        <Link
-          className="no-underline text-xl border border-zinc-300 p-2 rounded-md bg-emerald-700 text-white hover:bg-emerald-900"
-          href="/signup">
-          Sign Up
-        </Link>
+        <Link href="/signup" className={linkStyle}>Sign Up</Link>
       </li>
     </>
   );
 
   return (
-    <nav className="sticky top-0 z-40 w-full border-b border-separator bg-background/70 backdrop-blur-lg">
+    <nav className="sticky top-0 z-40 w-full border-b border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/70 backdrop-blur-lg">
+      
       <header className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">
+
+        {/* LEFT */}
         <div className="flex items-center gap-4">
+          
+          {/* Mobile menu */}
           <button
-            className="md:hidden"
+            className="md:hidden text-zinc-700 dark:text-zinc-200"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-            aria-expanded={isMenuOpen}>
-            <span className="sr-only">Menu</span>
-            <svg
-              className="h-6 w-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24">
-              {isMenuOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
+          >
+            ☰
           </button>
+
           <div className="flex items-center gap-3">
-            <p className="font-bold text-3xl">
-              Start<span className="text-emerald-800 text-4xl">Kit</span>
+            <p className="font-bold text-2xl text-zinc-900 dark:text-white">
+              Start<span className="text-emerald-600 dark:text-emerald-400">Kit</span>
             </p>
+
+            <ThemeToggle />
           </div>
         </div>
-        <ul className="hidden items-center gap-4 md:flex">{links}</ul>
-        <div className="hidden items-center gap-4 md:flex">
+
+        {/* DESKTOP LINKS */}
+        <ul className="hidden md:flex items-center gap-3">
+          {links}
+        </ul>
+
+        {/* RIGHT */}
+        <div className="hidden md:flex items-center gap-3">
           {user ? (
             <>
-              <span className="text-blue-500 font-bold text-lg">
+              <span className="text-emerald-700 dark:text-emerald-400 font-semibold">
                 {user.name}
               </span>
               <Button onClick={handleSignOut}>Sign Out</Button>
             </>
           ) : (
-            <Link
-              className="no-underline text-xl border border-zinc-300 p-2 rounded-md bg-emerald-700 text-white hover:bg-emerald-900"
-              href="/login">
+            <Link href="/login" className={linkStyle}>
               Login
             </Link>
           )}
         </div>
       </header>
+
+      {/* MOBILE MENU */}
       {isMenuOpen && (
-        <div className="border-t border-separator md:hidden">
+        <div className="md:hidden border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900">
           <ul className="flex flex-col gap-2 p-4">
             {links}
-            <li className="mt-4 flex flex-col gap-2 border-t border-separator pt-4">
+
+            <li className="mt-4 pt-4 border-t border-zinc-200 dark:border-zinc-800">
               {user ? (
                 <>
-                  <div className="text-blue-500 font-bold ">{user.name}</div>
+                  <div className="text-emerald-700 dark:text-emerald-400 font-semibold">
+                    {user.name}
+                  </div>
                   <Button onClick={handleSignOut}>Sign Out</Button>
                 </>
               ) : (
-                <Link
-                  href="/login"
-                  className="block py-2 no-underline text-xl border border-zinc-300 p-2 rounded-md bg-emerald-700 text-white">
+                <Link href="/login" className={linkStyle}>
                   Login
                 </Link>
               )}
