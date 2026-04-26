@@ -7,7 +7,7 @@ import instagram from "@/assets/instagram.png";
 import swimming from "@/assets/swimming.png";
 import classroom from "@/assets/class.png";
 import playground from "@/assets/playground.png";
-
+import background from "@/assets/bg.png" 
 const RightSideBar = () => {
     return (
         <div>
@@ -46,7 +46,11 @@ const RightSideBar = () => {
                         <Image src={swimming} alt='swimming' width={300} height={300} className="mx-auto block"/>
                         <Image src={classroom} alt='classroom' width={300} height={300}  className="mx-auto block"/>
                         <Image src={playground} alt='playground' width={300} height={300}  className="mx-auto block"/>
+                       
                     </div>
+                     <div className='items-center mt-4'>
+                        <Image src={background} alt='playground' width={500} height={900}  className="mx-auto block"/>
+                     </div>
 
                 </div>
             </div>
